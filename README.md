@@ -16,6 +16,8 @@ SOC home lab project demonstrating endpoint monitoring, log ingestion, and alert
 
 ## Investigation
 
+001-template.md
+
 ## Challenges
 
 ## Lessons Learned
