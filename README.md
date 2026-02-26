@@ -31,6 +31,11 @@ The lab simulates common endpoint security events to demonstrate the detection l
 
 ## Architecture
 
+The lab architecture consists of two virtual machines connected through a virtual network created in VMware Workstation. An Ubuntu server hosts the Wazuh manager and dashboard, functioning as the SIEM platform responsible for collecting, analyzing, and visualizing security telemetry. A Windows 11 endpoint runs the Wazuh agent, which forwards system and security logs to the Wazuh server for analysis.
+
+Security events generated on the Windows endpoint are transmitted through the Wazuh agent to the Wazuh manager, where detection rules process incoming logs and generate alerts. Analysts access the Wazuh web dashboard to monitor alerts, review log data, and perform investigations. This architecture demonstrates the core SOC workflow of endpoint telemetry collection, centralized log analysis, detection, and incident investigation within a virtualized environment.
+
+
 ## Setup Summary
 
 ## Activity / Simulation
