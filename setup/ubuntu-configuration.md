@@ -6,7 +6,7 @@ Notes:
 
 -Network mode: NAT
 
--Install Command:   Install Script = curl -sO https://packages.wazuh.com/4.7/wazuh-install.sh     
+-Install Wazuh Command:   Install Script = curl -sO https://packages.wazuh.com/4.7/wazuh-install.sh     
                     Download Script = (original) sudo bash wazuh-install.sh -a  ----->  (adjusted) sudo bash ./wazuh-install.sh -a -i
 
 -Time install took: 15 mins
