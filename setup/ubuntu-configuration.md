@@ -73,7 +73,11 @@ The dashboard provides visibility into:
 • Threat detection events
 ![Wazuh Dashboard](ubuntu-screenshots/wazuh-dashboard.png)
 
+## Wazuh Manager Ready for Endpoint Monitoring
 
+With the Wazuh platform fully installed and operational, the system is ready to receive logs and telemetry from endpoint agents.
+
+The next step in the lab involves installing the Wazuh agent on the Windows endpoint and connecting it to the manager.
 
 
 
