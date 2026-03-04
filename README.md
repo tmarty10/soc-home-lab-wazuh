@@ -40,7 +40,7 @@ Security events generated on the Windows endpoint are transmitted through the Wa
 
 ## Setup Summary
 
-## Activity / Simulation
+## Alert Simulations
 
 ## Results
 
