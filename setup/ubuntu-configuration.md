@@ -1,38 +1,76 @@
-Notes: 
+## Ubuntu Wazuh Manager Setup
 
--Ubuntu version: Ubuntu 24.04.4 LTS
+This section documents the configuration of the Wazuh manager running on an Ubuntu virtual machine.  
+The manager is responsible for collecting logs, analyzing security events, and generating alerts from connected endpoints.
 
--VM specs: 6GB Ram , 1 Processor , 4 Cores
+Environment configuration:
 
--Network mode: NAT
+Ubuntu VM
+Operating System: Ubuntu
+Role: Wazuh Manager / SIEM Server
 
--Install Wazuh Command:   Install Script = curl -sO https://packages.wazuh.com/4.7/wazuh-install.sh     
-                    Download Script = (original) sudo bash wazuh-install.sh -a  ----->  (adjusted) sudo bash ./wazuh-install.sh -a -i
+Network configuration:
+Ubuntu Wazuh Manager IP: 192.168.147.129
+Windows Endpoint IP: 192.168.147.128
 
--Time install took: 15 mins
+(include vm specs)
 
--Issues:
+The Wazuh installation package was downloaded from the official Wazuh repository.
 
-  -incompatibility with wazuh and my ubuntu version
-     
-      Changed command to ignore compatibility: sudo bash ./wazuh-install.sh -a -i
-              - added ./ to target specific file in folder and -i to ignore the unexpected verion
+The installation script automatically installs the following components:
 
+• Wazuh Manager
+• Wazuh Indexer
+• Wazuh Dashboard
 
-Terminal during install
-![Wazuh Install](ubuntu-screenshots/wazuh-install.png)
+(wazuh download ss)
 
-Wazuh Download
-![Wazuh Download](ubuntu-screenshots/wazuh-download.png)
+The Wazuh installation script was executed on the Ubuntu server to deploy the full SIEM stack.
 
-Confirm Services Running
-![Wazuh Dashboard Running](ubuntu-screenshots/wazuh-dash-running.png)
-![Wazuh Manager Running](ubuntu-screenshots/wazuh-manager-running.png)
+The installer configures and installs:
 
-Wazuh IP
+• Wazuh Manager
+• Wazuh Indexer
+• Wazuh Dashboard
+
+The installation process automatically configures services, generates certificates, and initializes the Wazuh cluster.
+
+(wazuh installation ss)
+
+After installation, system services were verified to confirm the Wazuh platform components were running.
+
+The following services must be active:
+
+• wazuh-manager
+• wazuh-indexer
+• wazuh-dashboardng
+
+(services running ss)
+
+## Identifying the Wazuh Server IP Address
+
+The Ubuntu server IP address was identified using the ip a command.
+
+This IP address is required for:
+
+• Accessing the Wazuh web dashboard
+• Connecting endpoint agents
 ![Wazuh IP Address](ubuntu-screenshots/wazuh-ip.png)
 
-Waszuh dashboard
+## Accessing the Wazuh Dashboard
+
+After the services were confirmed running, the Wazuh dashboard was accessed through a web browser using the server IP address.
+
+Dashboard URL:
+
+https://192.168.147.129
+
+The dashboard provides visibility into:
+
+• Connected agents
+• Security alerts
+• Log analysis
+• Threat detection events
 ![Wazuh Dashboard](ubuntu-screenshots/wazuh-dashboard.png)
 
 
