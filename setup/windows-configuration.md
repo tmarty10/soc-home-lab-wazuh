@@ -50,6 +50,8 @@ The Windows 11 endpoint is now successfully connected to the Wazuh manager and r
 
 This endpoint will be used to generate security events and simulate attack scenarios for detection testing.
 
+(insert screenshot verifying windows logs are being collected by the agent. eventvwr)
+
 
 
 
