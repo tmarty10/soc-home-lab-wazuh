@@ -46,7 +46,7 @@ After installation the Wazuh service was started and verified using PowerShell.
 
 The service status confirms the agent is running successfully.
 
-(service running screenshot)
+![Windows Service](windows-screenshots/wazuh-service-on-windows.png)
 
 ## Agent Registration in Wazuh Dashboard
 
@@ -58,9 +58,9 @@ The agent status shows as Active indicating successful communication with the Wa
 
 ## Verifying Windows Event Log Collection
 
+Through the Windows Event Viewer, we can confirm that logs are being generated from the Windows 11 vm as seen in the security logs. EventID 4624 is shown confirming successful login
 
-
-(insert screenshot verifying windows logs are being collected by the agent. eventvwr)
+![Windows Event Viewer](windows-screenshots/windows-eventviewer.png)
 
 The Windows 11 endpoint is now successfully connected to the Wazuh manager and ready for monitoring.
 
