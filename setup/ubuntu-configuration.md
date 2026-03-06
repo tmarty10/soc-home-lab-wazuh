@@ -3,7 +3,8 @@
 This section documents the configuration of the Wazuh manager running on an Ubuntu virtual machine.  
 The manager is responsible for collecting logs, analyzing security events, and generating alerts from connected endpoints.
 
-Environment configuration:
+
+##Lab Enviornment Configuration
 
 Ubuntu VM
 Operating System: Ubuntu
@@ -14,6 +15,8 @@ Ubuntu Wazuh Manager IP: 192.168.147.129
 Windows Endpoint IP: 192.168.147.128
 
 (include vm specs)
+
+##Downloading/Installing Wazuh Package
 
 The Wazuh installation package was downloaded from the official Wazuh repository.
 
@@ -33,6 +36,8 @@ The installer configures and installs:
 
 
 The installation process automatically configures services, generates certificates, and initializes the Wazuh cluster.
+
+##Verifying Wazuh Services
 
 After installation, system services were verified to confirm the Wazuh platform components were running.
 
