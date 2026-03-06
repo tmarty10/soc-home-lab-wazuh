@@ -41,11 +41,10 @@ The following services must be active:
 • wazuh-manager
 ![Wazuh Manager Service](ubuntu-screenshots/wazuh-manager-running.png)
 • Wazuh Indexer
-![Wazuh IP Address](ubuntu-screenshots/wazuh-ip.png)
+![Wazuh Indexer Service](ubuntu-screenshots/wazuh-indexer-running.png)
 • wazuh-dashboardng
 ![Wazuh Dashboard Service](ubuntu-screenshots/wazuh-dash-running.png)
 
-(services running ss)
 
 ## Identifying the Wazuh Server IP Address
 
