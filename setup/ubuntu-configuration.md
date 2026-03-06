@@ -17,33 +17,33 @@ Windows Endpoint IP: 192.168.147.128
 
 The Wazuh installation package was downloaded from the official Wazuh repository.
 
-The installation script automatically installs the following components:
-
-• Wazuh Manager
-• Wazuh Indexer
-• Wazuh Dashboard
-
-(wazuh download ss)
+![Wazuh Download](ubuntu-screenshots/wazuh-download.png)
 
 The Wazuh installation script was executed on the Ubuntu server to deploy the full SIEM stack.
+
+Command for install: sudo ./wazuh-install.sh -a
 
 The installer configures and installs:
 
 • Wazuh Manager
+![Wazuh Manager Service](ubuntu-screenshots/wazuh-manager-running.png)
 • Wazuh Indexer
+![Wazuh IP Address](ubuntu-screenshots/wazuh-ip.png)
 • Wazuh Dashboard
+![Wazuh Dashboard Service](ubuntu-screenshots/wazuh-dash-running.png)
 
 The installation process automatically configures services, generates certificates, and initializes the Wazuh cluster.
-
-(wazuh installation ss)
 
 After installation, system services were verified to confirm the Wazuh platform components were running.
 
 The following services must be active:
 
 • wazuh-manager
-• wazuh-indexer
+![Wazuh Manager Service](ubuntu-screenshots/wazuh-manager-running.png)
+• Wazuh Indexer
+![Wazuh IP Address](ubuntu-screenshots/wazuh-ip.png)
 • wazuh-dashboardng
+![Wazuh Dashboard Service](ubuntu-screenshots/wazuh-dash-running.png)
 
 (services running ss)
 
