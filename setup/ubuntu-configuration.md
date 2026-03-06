@@ -26,11 +26,11 @@ Command for install: sudo ./wazuh-install.sh -a
 The installer configures and installs:
 
 • Wazuh Manager
-![Wazuh Manager Service](ubuntu-screenshots/wazuh-manager-running.png)
+
 • Wazuh Indexer
-![Wazuh IP Address](ubuntu-screenshots/wazuh-ip.png)
+
 • Wazuh Dashboard
-![Wazuh Dashboard Service](ubuntu-screenshots/wazuh-dash-running.png)
+
 
 The installation process automatically configures services, generates certificates, and initializes the Wazuh cluster.
 
