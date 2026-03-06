@@ -16,23 +16,21 @@ Before installing the Wazuh agent, network connectivity between the Windows endp
 
 The results confirm successful communication between the two systems.
 
-(insert ping screenshot)
+![Ubuntu Ping](windows-screenshots/ubuntu-ping.png)
 
 Ports 1514 and 1515 are used by Wazuh agents to communicate with the manager.
 
 Using Test-NetConnection confirmed that both ports are reachable from the Windows endpoint.
 
-(port connectivity screenshot)
+![Port Connectivity](windows-screenshots/wazuh-ports.png)
 
-The Wazuh agent installer was downloaded from the official Wazuh repository.
+The Wazuh agent installer was downloaded from the official Wazuh repository online.
 
 File used: wazuh-agent-4.14.3-1.msi
 
-(agent download screenshot)
-
 The Wazuh agent was installed silently using the MSI installer and configured to connect directly to the Wazuh manager IP address.
 
-(wazuh install screenshot
+![Wazuh Agent Install](windows-screenshots/windows-agent-install.png)
 
 After installation the Wazuh service was started and verified using PowerShell.
 
@@ -44,7 +42,7 @@ After the agent connected successfully, the Windows endpoint appeared in the Waz
 
 The agent status shows as Active indicating successful communication with the Wazuh manager.
 
-(wazuh dashboard agent active ss)
+![Wazuh Agent Active](windows-screenshots/wazuh-dashboard-with-windows.png)
 
 The Windows 11 endpoint is now successfully connected to the Wazuh manager and ready for monitoring.
 
