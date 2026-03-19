@@ -34,7 +34,7 @@ This was configured using the Windows registry:
 
 This configuration allows visibility into executed PowerShell commands and enables detection of suspicious activity through Event ID **4104**.
 
-![Script Block Logging Enabled](../screenshots/alert_simulations/powershell_logging_enabled.png)
+![Script Block Logging Enabled](../screenshots/alert_simulations/scriptblocklogging.png)
 
 ---
 
@@ -42,7 +42,7 @@ This configuration allows visibility into executed PowerShell commands and enabl
 
 The following screenshot shows execution of a PowerShell command that is commonly associated with dynamic or potentially unsafe execution.
 
-![PowerShell Command Execution](../screenshots/alert_simulations/powershell_execution.png)
+![PowerShell Command Execution](../screenshots/alert_simulations/sus_command.png)
 
 ---
 
@@ -68,7 +68,7 @@ The custom Wazuh rule successfully detected suspicious PowerShell command execut
 - Alert Level: **12**
 - Description: **Suspicious PowerShell command detected**
 
-![Wazuh Alert - PowerShell](../screenshots/alert_simulations/Wazuh_100105.png)
+![Wazuh Alert - PowerShell](../screenshots/alert_simulations/wazuh_100105.png)
 
 ---
 
