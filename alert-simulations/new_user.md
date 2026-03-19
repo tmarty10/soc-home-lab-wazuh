@@ -74,7 +74,7 @@ The custom Wazuh rule successfully detected the creation of a new user account.
 - Alert Level: **8**
 - Description: **New local Windows user account created**
 
-![Wazuh Alert - User Created](../screenshots/alert_simulations/Wazuh_100101.png)
+![Wazuh Alert - User Created](../screenshots/alert_simulations/wazuh_100101.png)
 
 ---
 
