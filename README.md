@@ -39,8 +39,55 @@ Security events generated on the Windows endpoint are transmitted through the Wa
 
 
 ## Setup Summary
+Wazuh Manager (Ubuntu VM)
+
+   - IP Address: 192.168.147.129
+
+   - RAM: 6 GB
+
+   - CPU: 1 Processor / 2 Cores
+
+   - Role: SIEM (Log collection, analysis, alerting)
+
+An Ubuntu VM was configured as the Wazuh manager with IP 192.168.147.129. The full Wazuh stack (manager, indexer, and dashboard) was installed using the official installation script. After installation, all services were verified to be running, and the dashboard was accessed via the server IP in a web browser. The system was then ready to receive and process logs from connected agents.
+
+Windows 11 Endpoint
+
+   - IP Address: 192.168.147.128
+
+   - RAM: 3 GB
+
+   - CPU: 1 Processor / 2 Cores
+
+   - OS: Windows 11 Enterprise
+
+   - Wazuh Agent Version: 4.14.3
+
+A Windows 11 VM was configured as the monitored endpoint and assigned IP 192.168.147.128. Network connectivity to the Wazuh manager (192.168.147.129) was verified using ping, and ports 1514 and 1515 were confirmed open using Test-NetConnection. The Wazuh agent (v4.14.3) was installed using the MSI installer and configured to connect to the manager. After installation, the Wazuh service was started and verified, and the agent successfully appeared as active in the Wazuh dashboard.
 
 ## Alert Simulations
+The following simulations were conducted on the Windows 11 endpoint to validate detection capabilities within the Wazuh SIEM environment.  While Wazuh includes built-in rules for many common security events, custom rules were created as part of this project to practice rule development and better understand how detections are defined within the Wazuh configuration files. These rules were tested and validated through controlled attack simulations. A more in depth description of each simulation can be found in the simulations folder.
+
+<u>Multiple Failed Login Attempts (Brute Force):</u>
+
+Simulated repeated failed login attempts to trigger a threshold-based alert. The custom rule detects excessive authentication failures indicative of brute force activity.
+
+<u>User Creation & Privilege Escalation:</u>
+
+Created a new user account and added it to the Administrators group. Custom rules detect both account creation and unauthorized privilege escalation events.
+
+<u>Suspicious Service Creation:</u>
+
+Simulated the creation of a new Windows service using command-line tools. The custom rule identifies service creation as a potential persistence mechanism.
+
+<u>Sensitive File Modification:</u>
+
+Modified a monitored file to simulate unauthorized access. File Integrity Monitoring detects changes to sensitive files and generates an alert.
+
+<u>Suspicious PowerShell Activity:</u>
+
+Executed encoded or suspicious PowerShell commands to identify potentially malicious powershell activity. 
+
 
 ## Results
 
