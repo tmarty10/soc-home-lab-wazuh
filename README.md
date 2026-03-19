@@ -13,11 +13,10 @@ This project demonstrates how a Security Information and Event Management (SIEM)
 - Wazuh (SIEM platform)
 - VMware Workstation (virtualization)
 - Ubuntu Linux (Wazuh server)
+- Ubuntu terminal
 - Windows 11 (monitored endpoint)
 - Windows Event Viewer
 - PowerShell
-- MITRE ATT&CK Framework
-- GitHub (documentation and version control)
 
 ## Architecture
 
