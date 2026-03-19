@@ -20,7 +20,7 @@ A custom Wazuh rule was configured to trigger an alert when multiple failed logi
 
 The following screenshot shows repeated failed login attempts on the Windows endpoint using invalid credentials for the "Admin" account. These attempts were intentionally performed to simulate a brute force or password spraying scenario.
 
-![Failed Login Screen](screenshots/failed_login.png)
+![Failed Login Screen](../screenshots/alert_simulations/failed_login.png)
 
 
 ## Log Evidence (Windows Event Viewer)
@@ -31,7 +31,7 @@ The failed login attempts were successfully recorded in the Windows Security log
 - Description: **An account failed to log on**
 - Failure Reason: **Unknown user name or bad password**
 
-![Event Viewer - Failed Login](../screenshots/failed-login-eventviewer.png)
+![Event Viewer - Failed Login](../screenshots/alert_simulations/Event_viewer_4625.png)
 
 ## Wazuh Alert Detection
 
@@ -41,7 +41,7 @@ The custom Wazuh rule successfully detected multiple failed login attempts and g
 - Alert Level: **10**
 - Description: **Multiple Windows failed login attempts detected**
 
-![Wazuh Alert](../screenshots/failed-login-wazuh.png)
+![Wazuh Alert](../screenshots/alert_simulations/Wazuh_100100.png)
 
 ---
 
