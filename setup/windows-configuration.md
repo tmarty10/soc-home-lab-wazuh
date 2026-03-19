@@ -8,11 +8,17 @@ The Windows system is configured with the Wazuh agent which communicates with th
 
 Environment:
 
+Ubuntu VM IP: 192.168.147.129
+   - 6GB RAM
+   - 1 Processor
+   - 2 Cores per processor
+
 Windows VM IP: 192.168.147.128
-Ubuntu Wazuh Manager IP: 192.168.147.129
-Agent Version: 4.14.3
-Operating System: Windows 11 Enterprise
-VM specs: 4GB Ram , 1 Processor , 2 Cores
+   - 3GB Ram
+   - 1 Processor
+   - 2 Cores per processor
+   - Agent Version: 4.14.3
+   - Operating System: Windows 11 Enterprise
 
 ## Network Connectivity Verification
 
