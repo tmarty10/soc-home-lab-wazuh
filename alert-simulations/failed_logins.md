@@ -66,9 +66,3 @@ Multiple failed login attempts may indicate:
 - Unauthorized access attempts
 
 If successful, this type of attack could lead to account compromise and privilege escalation.
-
----
-
-## Conclusion
-
-This simulation demonstrates the ability to detect and analyze brute force login behavior using Wazuh. The custom rule successfully identified suspicious login activity and generated actionable alerts for investigation.
