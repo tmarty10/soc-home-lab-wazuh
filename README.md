@@ -57,15 +57,20 @@ A Windows 11 VM was configured as the monitored endpoint and assigned IP 192.168
 ## Alert Simulations
 The following simulations were conducted on the Windows 11 endpoint to validate detection capabilities within the Wazuh SIEM environment.  While Wazuh includes built-in rules for many common security events, custom rules were created as part of this project to practice rule development and better understand how detections are defined within the Wazuh configuration files. These rules were tested and validated through controlled attack simulations. A more in depth description of each simulation can be found in the simulations folder.
 
-**- Multiple Failed Login Attempts (Brute Force):** Simulated repeated failed login attempts to trigger a threshold-based alert. The custom rule detects excessive authentication failures indicative of brute force activity.
+**- Multiple Failed Login Attempts (Brute Force):** 
+               Simulated repeated failed login attempts to trigger a threshold-based alert. The custom rule detects excessive authentication failures indicative of brute force activity.
 
-**- User Creation & Privilege Escalation:** Created a new user account and added it to the Administrators group. Custom rules detect both account creation and unauthorized privilege escalation events.
+**- User Creation & Privilege Escalation:** 
+               Created a new user account and added it to the Administrators group. Custom rules detect both account creation and unauthorized privilege escalation events.
 
-**- Suspicious Service Creation:** Simulated the creation of a new Windows service using command-line tools. The custom rule identifies service creation as a potential persistence mechanism.
+**- Suspicious Service Creation:** 
+               Simulated the creation of a new Windows service using command-line tools. The custom rule identifies service creation as a potential persistence mechanism.
 
-**- Sensitive File Modification:** Modified a monitored file to simulate unauthorized access. File Integrity Monitoring detects changes to sensitive files and generates an alert.
+**- Sensitive File Modification:** 
+               Modified a monitored file to simulate unauthorized access. File Integrity Monitoring detects changes to sensitive files and generates an alert.
 
-**- Suspicious PowerShell Activity:** Executed encoded or suspicious PowerShell commands to identify potentially malicious powershell activity. 
+**- Suspicious PowerShell Activity:** 
+               Executed encoded or suspicious PowerShell commands to identify potentially malicious powershell activity. 
 
 
 ## Challenges
