@@ -19,16 +19,6 @@ This project demonstrates how a Security Information and Event Management (SIEM)
 - MITRE ATT&CK Framework
 - GitHub (documentation and version control)
 
-## Detection Scenarios
-The lab simulates common endpoint security events to demonstrate the detection lifecycle:
-- Multiple failed login attempts
-- Suspicious PowerShell execution
-- Account lockout activity
-- Windows security log monitoring
-- Endpoint telemetry ingestion into SIEM
-- Alert generation and triage
-- Mapping alerts to MITRE ATT&CK techniques
-
 ## Architecture
 
 The lab architecture consists of two virtual machines connected through a virtual network created in VMware Workstation. An Ubuntu server hosts the Wazuh manager and dashboard, functioning as the SIEM platform responsible for collecting, analyzing, and visualizing security telemetry. A Windows 11 endpoint runs the Wazuh agent, which forwards system and security logs to the Wazuh server for analysis.
@@ -68,30 +58,16 @@ A Windows 11 VM was configured as the monitored endpoint and assigned IP 192.168
 ## Alert Simulations
 The following simulations were conducted on the Windows 11 endpoint to validate detection capabilities within the Wazuh SIEM environment.  While Wazuh includes built-in rules for many common security events, custom rules were created as part of this project to practice rule development and better understand how detections are defined within the Wazuh configuration files. These rules were tested and validated through controlled attack simulations. A more in depth description of each simulation can be found in the simulations folder.
 
-<u>Multiple Failed Login Attempts (Brute Force):</u>
+**- Multiple Failed Login Attempts (Brute Force):** Simulated repeated failed login attempts to trigger a threshold-based alert. The custom rule detects excessive authentication failures indicative of brute force activity.
 
-Simulated repeated failed login attempts to trigger a threshold-based alert. The custom rule detects excessive authentication failures indicative of brute force activity.
+**- User Creation & Privilege Escalation:** Created a new user account and added it to the Administrators group. Custom rules detect both account creation and unauthorized privilege escalation events.
 
-<u>User Creation & Privilege Escalation:</u>
+**- Suspicious Service Creation:** Simulated the creation of a new Windows service using command-line tools. The custom rule identifies service creation as a potential persistence mechanism.
 
-Created a new user account and added it to the Administrators group. Custom rules detect both account creation and unauthorized privilege escalation events.
+**- Sensitive File Modification:** Modified a monitored file to simulate unauthorized access. File Integrity Monitoring detects changes to sensitive files and generates an alert.
 
-<u>Suspicious Service Creation:</u>
+**- Suspicious PowerShell Activity:** Executed encoded or suspicious PowerShell commands to identify potentially malicious powershell activity. 
 
-Simulated the creation of a new Windows service using command-line tools. The custom rule identifies service creation as a potential persistence mechanism.
-
-<u>Sensitive File Modification:</u>
-
-Modified a monitored file to simulate unauthorized access. File Integrity Monitoring detects changes to sensitive files and generates an alert.
-
-<u>Suspicious PowerShell Activity:</u>
-
-Executed encoded or suspicious PowerShell commands to identify potentially malicious powershell activity. 
-
-
-## Results
-
-## Investigation
 
 ## Challenges
 
