@@ -13,11 +13,13 @@ Role: Wazuh Manager / SIEM Server
 Network configuration:
 Ubuntu Wazuh Manager IP: 192.168.147.129
    - 6GB RAM
-   - 2 Processors
+   - 1 Processor
+   - 2 cores per processor
 
 Windows Endpoint IP: 192.168.147.128
    - 3GB RAM
-   - 2 Processors
+   - 1 Processors
+   - -2 cores per processor
 
 
 ## Downloading/Installing Wazuh Package
