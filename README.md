@@ -73,8 +73,25 @@ The following simulations were conducted on the Windows 11 endpoint to validate 
                Executed encoded or suspicious PowerShell commands to identify potentially malicious powershell activity. 
 
 
-## Challenges
+## Challenges/Lessons Learned
+### Wazuh Agent–Manager Compatibility Issues
+- Connecting the Windows agent to the Ubuntu Wazuh manager initially failed due to version incompatibility. I discovered that newer agents are not always compatible with older manager versions, requiring the manager to be updated before successful communication could occur. This highlighted the importance of version alignment across SIEM components.
+### PowerShell Logging Configuration
+- Detecting suspicious PowerShell activity required enabling Script Block Logging on the Windows endpoint. Without this configuration, the relevant logs were not generated, preventing detection. This emphasized the dependency between proper log configuration and effective SIEM alerting.
+### Sensitive File Monitoring Setup
+- Implementing a “sensitive file change” detection required configuring file integrity monitoring and ensuring the file was properly tracked by Wazuh. Determining how to designate and monitor a file as “sensitive” required additional configuration beyond default settings.
+### Leveraging Built-in Rule IDs for Custom Alerts
+- To ensure custom rules triggered reliably, it was necessary to reference existing Wazuh rule IDs (e.g., using if_sid). Identifying the correct built-in rule IDs and understanding how they map to Windows events was a challenge, but critical for integrating custom detections into the Wazuh rule hierarchy.
+### Wazuh Dashboard Access and Routing Issue
+- The Wazuh dashboard initially failed to load due to incorrect routing. The interface automatically redirected to /app/home, which was incompatible with the deployed configuration. Manually navigating to /app/wz-home resolved the issue. This reinforced the importance of understanding application paths and version-specific UI behavior.
 
-## Lessons Learned
+These challenges reinforced the importance of proper log configuration, version compatibility, and understanding how SIEM tools process and correlate events across endpoints.
 
 ## Future Improvements
+
+- Integrate Sysmon for enhanced visibility
+- Expand detection coverage (MITRE ATT&CK techniques)
+- Improve rule precision and reduce false positives
+- Incorporate command-line log analysis on the Wazuh manager
+- Customize dashboards and visualizations
+- Expand to a multi-endpoint environment
