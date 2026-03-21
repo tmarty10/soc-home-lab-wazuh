@@ -20,7 +20,7 @@ These rules leverage existing Wazuh rule IDs (`if_matched_sid`) and Windows Even
 
 Below is a snippet of the custom rules configured on the Wazuh manager:
 
-![Custom Rules](../screenshots/custom_rules.png)
+![Custom Rules](../screenshots/alert_simulations/custom_rules.png)
 
 ## Simulation Files
 
