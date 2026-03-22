@@ -19,7 +19,7 @@ Ubuntu Wazuh Manager IP: 192.168.147.129
 Windows Endpoint IP: 192.168.147.128
    - 3GB RAM
    - 1 Processors
-   - -2 cores per processor
+   - 2 cores per processor
 
 
 ## Downloading/Installing Wazuh Package
