@@ -56,7 +56,7 @@ The PowerShell command execution was captured using Script Block Logging.
 
 This logging provides visibility into executed PowerShell commands and is critical for detecting malicious activity.
 
-![PowerShell Log Evidence](../screenshots/alert_simulations/powershell_event_4104.png)
+![PowerShell Log Evidence](../screenshots/alert_simulations/eventviewer4104.png)
 
 ---
 
